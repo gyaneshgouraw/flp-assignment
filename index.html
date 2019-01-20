@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background: #d6d1d1;
+        height: 800px;
+      }
+
+      hr.line {
+        border-top: 1px solid white;
+      }
+
+      .container {
+        width: 80%;
+        display: flex;
+      }
+      .cartContainer {
+        padding: 1%;
+        width: 60%;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        background: white;
+      }
+      .priceContainer {
+        padding: 1%;
+        width: 30%;
+        margin-left: auto;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        background: white;
+        height: 10%;
+      }
+
+      .cardItem {
+        display: flex;
+        padding: 2%;
+      }
+      .itemImage {
+        margin-right: 2%;
+      }
+      .itemImage > img {
+        /* height: 45px; */
+        width: 50px;
+      }
+      .itemDetails {
+        display: flex;
+        flex-direction: column;
+      }
+      .itemDetails > div {
+        margin-top: 1%;
+      }
+      .rupee {
+        margin-right: 2%;
+        font-weight: 600;
+      }
+      .deliveryfee {
+        margin-right: 2%;
+      }
+      .priceItems {
+        display: flex;
+        flex-direction: column;
+      }
+      .pitemText {
+        display: flex;
+        justify-content: space-between;
+        margin: 10% 0;
+      }
+      .pitemLabel {
+        font-weight: 600;
+      }
+      .itemCartCount {
+        margin: 0 10px;
+      }
+      .btncartAdd {
+        border-radius: 20px;
+        background: #e0dcdc;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="cartContainer">
+        <div class="header">
+          <h3>Cart</h3>
+          <hr class="line" />
+          <div id="cartItems"></div>
+        </div>
+      </div>
+      <div class="priceContainer">
+        <div class="pHeader"><h3>Price Details</h3></div>
+        <hr class="line" />
+        <div id="priceItems">
+          <div class="pitemText">
+            <div class="pitemLabel">Total Price</div>
+            <div id="totalAmount">0</div>
+          </div>
+          <div class="pitemText">
+            <div class="pitemLabel">Deleivery Charges</div>
+            <div id="totalDelivery">0</div>
+          </div>
+          <div class="pitemText">
+            <div class="pitemLabel">Amount Payable</div>
+            <div id="totalPayable">0</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <button onclick="fnclear()">clear</button> -->
+  </body>
+  <script src="./index.js"></script>
+</html>
